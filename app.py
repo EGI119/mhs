@@ -17,6 +17,7 @@ gender = st.radio("Jenis Kelamin", ('Laki-laki', 'Perempuan'))
 age = st.number_input("Usia", min_value=15, max_value=40, value=20)
 year = st.selectbox("Tahun Studi", [1, 2, 3, 4])
 cgpa = st.slider("IPK", min_value=0.0, max_value=4.0, value=3.0, step=0.01)
+married = st.radio("Status Pernikahan", ("Ya", "Tidak")
 anxiety = st.radio("Apakah mengalami kecemasan?", ("Ya", "Tidak"))
 panic = st.radio("Apakah pernah mengalami serangan panik?", ("Ya", "Tidak"))
 treatment = st.radio("Apakah pernah konsultasi ke spesialis?", ("Ya", "Tidak"))
@@ -27,6 +28,7 @@ data = {
     'Age': age,
     'Your current year of Study': year,
     'CGPA_numeric': cgpa,
+    'Marital status': 1 if married == 'Ya' else 0,
     'Do you have Anxiety?': 1 if anxiety == 'Ya' else 0,
     'Do you have Panic attack?': 1 if panic == 'Ya' else 0,
     'Did you seek any specialist for a treatment?': 1 if treatment == 'Ya' else 0
